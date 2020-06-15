@@ -1,0 +1,5 @@
+IMG_NAME=dockerpi
+FIRST_USER_NAME=docker
+FIRST_USER_PASS=docker
+TARGET_HOSTNAME=dockerpi
+ENABLE_SSH=1

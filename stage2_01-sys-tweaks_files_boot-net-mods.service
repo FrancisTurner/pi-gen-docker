@@ -1,0 +1,13 @@
+[Unit]
+Description=Set up dhcpcd static network from /boot/netcfg.txt
+ConditionPathExists=/boot/netcfg.txt
+Before=raspberrypi-net-mods.service
+After=systemd-rfkill.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/bash /usr/local/bin/boot2net.sh
+
+[Install]
+WantedBy=multi-user.target
