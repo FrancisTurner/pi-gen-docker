@@ -83,14 +83,52 @@ permitted by applicable law.
 docker@dockerpi:~ $ passwd
 ...
 docker@dockerpi:~ $ docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+4ee5c797bcd7: Pull complete 
+Digest: sha256:d58e752213a51785838f9eed2b7a498ffa1cb3aa7f946dda11af39286c3db9a9
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (arm32v7)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+docker@dockerpi:~ $ cd composetest/
+docker@dockerpi:~/composetest $ ls
+app.py  docker-compose.yml  Dockerfile  requirements.txt
+docker@dockerpi:~/composetest $ docker-compose up
+Creating network "composetest_default" with the default driver
+Building web
+Step 1/9 : FROM python:3.7-alpine
+3.7-alpine: Pulling from library/python
+...
 ```
 
 ## Use cases
 
-The obvious one is to create usable docker servers for classes about docker. This, 
-and the ability to create test servers that I can blow away as/when I break things
-is why I created this repo in the first place. However with modifications 
-it could be used to deploy and run a series of docker containers in a 
+The obvious one is to create usable docker servers for learning about docker. This, 
+and the ability to create test servers that I can blow away as/when I break things,
+is why I created this repo in the first place. 
+
+However with modifications 
+it can be used to deploy and run a series of docker containers in a SOHO/SMB
 production environment. To do this you will need to put the relevant
 docker-compose.yml files in the image and then get them to run after boot (probably 
 by putting the commands in rc.local. To see how to do this look at how the 
