@@ -42,6 +42,7 @@ restorepigen.sh
 Burn pi image - using tool of choice e.g. Balena Etcher ( https://www.balena.io/etcher/ )
 
 Edit samplenetcfg.txt and save to the boot partition on the newly flashed SD card as netcfg.txt.
+Or alternatively use the nifty netcfg generator page here - https://francisturner.github.io/gencfg.html
 
 Notes:
  * You may need to eject and reinsert the SD card for your OS to correcly
