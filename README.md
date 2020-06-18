@@ -134,3 +134,11 @@ docker-compose.yml files in the image and then get them to run after boot (proba
 by putting the commands in rc.local. To see how to do this look at how the 
 composetest files are put in ~/composetest/ (see stage2_01-sys-tweaks_01-run.sh)
 
+
+## Sample Image
+
+In case you want to live dangerously and trust an image created by some random 
+stranger on the internet here is a recent version of the image you can download to
+burn on your SD-card - http://raspbian.devtru.st/files/dockerpi-lite.zip
+
+Share & Enjoy
